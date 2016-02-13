@@ -6,7 +6,7 @@
 
 #### Run `mongod` w/ persistent/shared directory
 
-    docker run -d -p 27017:27017 -v <db-dir>:/data/db --name mongodb babim/mongodb
+    docker run -d -p 27017:27017 -v <db-dir>:/data/db -v <db-dir>:/data/configdb --name mongodb babim/mongodb
 
 #### Run `mongod` w/ HTTP support
 
