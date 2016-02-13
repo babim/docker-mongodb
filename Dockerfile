@@ -54,7 +54,8 @@ RUN mkdir -p /data/db /data/configdb \
 	&& chown -R mongodb:mongodb /data/db /data/configdb
 VOLUME /data/db /data/configdb
 
-COPY docker-entrypoint.sh /entrypoint.sh && chmod +x /entrypoint.sh
+COPY docker-entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 27017
