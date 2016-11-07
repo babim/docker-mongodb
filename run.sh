@@ -1,10 +1,21 @@
-#!/bin/sh
-# Docker entrypoint (pid 1), run as root
-[ "$1" = "mongod" ] || exec "$@" || exit $?
+#!/bin/bash
+set -e
 
-# Make sure that database is owned by user mongodb
-[ "$(stat -c %U /data/db)" = mongodb ] || chown -R mongodb /data/db
+if [ "${1:0:1}" = '-' ]; then
+	set -- mongod "$@"
+fi
 
-# Drop root privilege (no way back), exec provided command as user mongodb
-cmd=exec; for i; do cmd="$cmd '$i'"; done
-exec su -s /bin/sh -c "$cmd" mongodb
+# allow the container to be started with `--user`
+if [ "$1" = 'mongod' -a "$(id -u)" = '0' ]; then
+	chown -R mongodb /data/configdb /data/db
+	exec gosu mongodb "$BASH_SOURCE" "$@"
+fi
+
+if [ "$1" = 'mongod' ]; then
+	numa='numactl --interleave=all'
+	if $numa true &> /dev/null; then
+		set -- $numa "$@"
+	fi
+fi
+
+exec "$@"
