@@ -8,5 +8,6 @@ VOLUME /data/db
 EXPOSE 27017 28017
 
 COPY run.sh /run.sh
+RUN chmod +x /run.sh
 ENTRYPOINT [ "/run.sh" ]
 CMD [ "mongod" ]
