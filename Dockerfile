@@ -7,7 +7,7 @@ RUN echo http://dl-4.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositorie
 VOLUME /data/db
 EXPOSE 27017 28017
 
-COPY run.sh /run.sh
-RUN chmod +x /run.sh
-ENTRYPOINT [ "/run.sh" ]
+COPY run.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "mongod" ]
