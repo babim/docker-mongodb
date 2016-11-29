@@ -1,3 +1,12 @@
+[![](https://images.microbadger.com/badges/image/babim/mongodb.svg)](https://microbadger.com/images/babim/mongodb "Get your own image badge on microbadger.com")[![](https://images.microbadger.com/badges/version/babim/mongodb.svg)](https://microbadger.com/images/babim/mongodb "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/babim/mongodb:ssh.svg)](https://microbadger.com/images/babim/mongodb:ssh "Get your own image badge on microbadger.com")[![](https://images.microbadger.com/badges/version/babim/mongodb:ssh.svg)](https://microbadger.com/images/babim/mongodb:ssh "Get your own version badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/image/babim/mongodb:pass.svg)](https://microbadger.com/images/babim/mongodb:pass "Get your own image badge on microbadger.com")[![](https://images.microbadger.com/badges/version/babim/mongodb:pass.svg)](https://microbadger.com/images/babim/mongodb:pass "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/babim/mongodb:pass.ssh.svg)](https://microbadger.com/images/babim/mongodb:pass.ssh "Get your own image badge on microbadger.com")[![](https://images.microbadger.com/badges/version/babim/mongodb:pass.ssh.svg)](https://microbadger.com/images/babim/mongodb:pass.ssh "Get your own version badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/image/babim/mongodb:alpine.svg)](https://microbadger.com/images/babim/mongodb:alpine "Get your own image badge on microbadger.com")[![](https://images.microbadger.com/badges/version/babim/mongodb:alpine.svg)](https://microbadger.com/images/babim/mongodb:alpine "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/babim/mongodb:alpine.ssh.svg)](https://microbadger.com/images/babim/mongodb:alpine.ssh "Get your own image badge on microbadger.com")[![](https://images.microbadger.com/badges/version/babim/mongodb:alpine.ssh.svg)](https://microbadger.com/images/babim/mongodb:alpine.ssh "Get your own version badge on microbadger.com")
+
 ### Usage
 
 #### Run `mongod`
