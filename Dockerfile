@@ -1,4 +1,4 @@
-FROM babim/alpinebase:3.8
+FROM babim/alpinebase:edge
 # Maintainer
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
