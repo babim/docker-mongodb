@@ -1,5 +1,5 @@
-FROM babim/debianbase:9
-ENV OSDEB stretch
+FROM babim/debianbase:8
+ENV OSDEB jessie
 
 # option run
 RUN apt-get update && \
