@@ -12,8 +12,8 @@ RUN apt-get update && \
 # Example: docker build --build-arg MONGO_PACKAGE=mongodb-enterprise --build-arg MONGO_REPO=repo.mongodb.com .
 ENV MONGO_PACKAGE mongodb-org
 ENV MONGO_REPO repo.mongodb.org
-ENV MONGO_MAJOR 3.4
-ENV MONGO_VERSION 3.4.17
+ENV MONGO_MAJOR 3.6
+ENV MONGO_VERSION 3.6.7
 
 # install
 RUN wget --no-check-certificate -O - https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20Mongodb%20install/mongodb_install.sh | bash
