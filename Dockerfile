@@ -25,4 +25,4 @@ ENTRYPOINT ["start.sh"]
 # port
 EXPOSE 27017
 # startup
-CMD ["mongod"]
+CMD ["supervisord", "-nc", "/etc/supervisor/supervisord.conf"]
