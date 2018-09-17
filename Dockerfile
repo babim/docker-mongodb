@@ -21,7 +21,7 @@ RUN wget --no-check-certificate -O - https://raw.githubusercontent.com/babim/doc
 # volume
 VOLUME /data/db /data/configdb
 # entrypoint
-ENTRYPOINT ["start.sh"]
+ENTRYPOINT ["/start.sh"]
 # port
 EXPOSE 27017
 # startup
