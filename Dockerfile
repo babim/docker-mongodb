@@ -1,10 +1,5 @@
-FROM babim/debianbase:9
+FROM babim/mongodb:base
 ENV OSDEB stretch
-
-# option run
-RUN apt-get update && \
-    apt-get install -y wget bash && cd / && wget --no-check-certificate https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/option.sh && \
-    chmod 755 /option.sh
 
 # Allow build-time overrides (eg. to build image with MongoDB Enterprise version)
 # Options for MONGO_PACKAGE: mongodb-org OR mongodb-enterprise
@@ -20,9 +15,5 @@ RUN wget --no-check-certificate -O - https://raw.githubusercontent.com/babim/doc
 
 # volume
 VOLUME /data/db /data/configdb
-# entrypoint
-ENTRYPOINT ["/start.sh"]
 # port
 EXPOSE 27017
-# startup
-CMD ["supervisord", "-nc", "/etc/supervisor/supervisord.conf"]
