@@ -9,4 +9,5 @@ RUN apt-get update && \
 # entrypoint
 ENTRYPOINT ["/start.sh"]
 # startup
-CMD ["supervisord", "-nc", "/etc/supervisor/supervisord.conf"]
+CMD ["mongod"]
+#CMD ["supervisord", "-nc", "/etc/supervisor/supervisord.conf"]
